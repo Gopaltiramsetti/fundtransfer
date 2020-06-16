@@ -1,0 +1,57 @@
+<label for="username">welcome to banking service  </label>
+<h2>{{loggedInUser}}<h2> 
+
+  <div >
+    <label for="username">Account Balance {{accountBalance}} INR </label>
+  </div>
+
+  <br>
+  
+
+
+  <div >
+    <h4 class="display-6">             Account Summury</h4>
+  </div>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Account Name</th>
+          <th scope="col">Account Number</th>
+          <th scope="col">Branch</th>
+          <th scope="col">Account Type</th>
+          <th scope="col">Ifscode</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let accountdel of accountDetls">
+          <th scope="row">{{accountdel.accountName}}</th>
+          <td>{{accountdel.acountNumber}}</td>
+          <td>{{accountdel.branch}}</td>
+          <td>{{accountdel.accType}}
+          <td>{{accountdel.ifscCode}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-center">
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-danger" routerLink="/addbeneficiary">Add Beneficiary</button>
+        </div>
+        
+        <div class="col">
+          <button class="btn btn-danger" routerLink="/fundtransfer">Fund Transfer</button>
+        </div>
+
+        <div class="col">
+          <button class="btn btn-danger" routerLink="/transactionhistory">Transaction History</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+
